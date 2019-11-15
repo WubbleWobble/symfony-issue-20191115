@@ -4,6 +4,10 @@
     Things that fix this error:
     - Removing form_theme
     - Swapping extends for a literal - e.g. {% extends "base.html.twig" %}
+    - Swapping _self for "theme.html.twig"
+
+    Things that won't fix the error:
+    - Swapping _self for "test/test.html.twig"
 #}
 {% extends silly %}
 
