@@ -1,0 +1,15 @@
+{#
+    The form_theme line causes "Variable 'silly' does not exist"
+
+    Things that fix this error:
+    - Removing form_theme
+    - Swapping extends for a literal - e.g. {% extends "base.html.twig" %}
+#}
+{% extends silly %}
+
+{% form_theme form _self %}
+
+{% block body %}
+world!
+    {{ form(form) }}
+{% endblock %}
